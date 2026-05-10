@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Costo del estacionamiento</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#101820] min-h-screen text-white flex flex-col items-center">
+
+    <header class="w-full bg-gradient-to-r from-[#0b1220] to-[#09152f] border-b-2 border-[#1f2c46] px-10 py-6 flex items-center justify-between">
+
+        <a href="../index.html"
+           class="bg-blue-600 hover:bg-blue-700 transition duration-300 px-6 py-3 rounded-xl font-bold shadow-lg hover:scale-105">
+            HOME
+        </a>
+
+        <h1 class="text-4xl font-extrabold text-yellow-400 flex-1 text-center mr-28">
+            Costo del estacioamiento
+        </h1>
+
+    </header>
+
+    <section class="mt-20 bg-[#1b2838] border-2 border-[#2e3f57] rounded-3xl shadow-2xl p-10 w-[90%] max-w-xl">
+
+        <div class="mb-6">
+            <label for="costPerHour" class="block mb-2 text-lg font-semibold text-blue-300">
+                Costo por hora
+            </label>
+
+            <input type="text"
+                   id="costPerHour"
+                   name="costPerHour"
+                   placeholder="Ingresa el costo por hora"
+                   class="w-full p-4 rounded-xl bg-[#0f172a] border border-[#334155] text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <div class="mb-8">
+            <label for="howManyHours" class="block mb-2 text-lg font-semibold text-blue-300">
+                Cuantas horas
+            </label>
+
+            <input type="text"
+                   id="howManyHours"
+                   name="howManyHours"
+                   placeholder="Ingresa la cantidad de horas"
+                   class="w-full p-4 rounded-xl bg-[#0f172a] border border-[#334155] text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <button onclick="ticketParking()"
+                class="w-full bg-blue-600 hover:bg-blue-700 transition duration-300 py-4 rounded-xl text-xl font-bold shadow-lg hover:-translate-y-1">
+            Calcular el costo del estacioamiento
+        </button>
+
+        <div class="mt-8 text-center">
+            <p id="result"
+               class="text-2xl font-bold text-yellow-400">
+            </p>
+        </div>
+
+    </section>
+
+    <script src="../scripts/problemas.js" defer></script>
+
+</body>
+</html>
